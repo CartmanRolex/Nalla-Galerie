@@ -1,7 +1,5 @@
 (function () {
-  var items = Array.prototype.slice.call(document.querySelectorAll('.work.zoom'));
-  if (!items.length) return;
-
+  var items = [];
   var lastFocus = null;
   var index = -1;
 
@@ -61,12 +59,20 @@
     if (lastFocus) lastFocus.focus();
   }
 
-  items.forEach(function (el, i) {
-    el.addEventListener('click', function () { open(i); });
-    el.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+  function bind() {
+    items = Array.prototype.slice.call(document.querySelectorAll('.work.zoom'));
+    items.forEach(function (el) {
+      if (el.dataset.lbBound) return;
+      el.dataset.lbBound = '1';
+      el.addEventListener('click', function () { open(items.indexOf(el)); });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(items.indexOf(el)); }
+      });
     });
-  });
+  }
+
+  bind();
+  document.addEventListener('works:rendered', bind);
 
   closeBtn.addEventListener('click', close);
   prevBtn.addEventListener('click', function () { show(index - 1); });

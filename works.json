@@ -1,0 +1,78 @@
+{
+  "series": [
+    {
+      "id": "braises",
+      "name": "Braises",
+      "works": [
+        {
+          "title": "Braise I",
+          "artist": "Nalla Thioye",
+          "medium": "Huile sur toile",
+          "image": "images/01-rouge-i.jpg",
+          "alt": "Masse rouge travaillée au couteau, éclats jaunes",
+          "description": "Une masse rouge travaillée au couteau, où la matière garde la trace du geste. Quelques éclats de jaune percent l'épaisseur, et la tranche dorée du châssis referme la composition."
+        },
+        {
+          "title": "Braise II",
+          "artist": "Nalla Thioye",
+          "medium": "Huile sur toile",
+          "image": "images/02-rouge-ii.jpg",
+          "alt": "Coulures rouges et colonne de jaune",
+          "description": "Les coulures descendent en rideau sur toute la hauteur de la toile. Une colonne de jaune traverse le rouge sombre, comme une trouée de lumière dans la combustion."
+        }
+      ]
+    },
+    {
+      "id": "pavois",
+      "name": "Pavois",
+      "works": [
+        {
+          "title": "Pirogues à quai",
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "image": "images/03-pirogues.jpg",
+          "alt": "Coques de pirogues peintes, rangées en diagonale",
+          "description": "Les coques peintes se rangent en diagonale, serrées les unes contre les autres. Chaque bordé porte ses motifs, ses vagues et ses couleurs — la signature d'un pêcheur autant qu'un décor."
+        },
+        {
+          "title": "Pavois",
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "image": "images/05-motifs.jpg",
+          "alt": "Rosaces et bandes de couleur",
+          "description": "Rosaces, cibles et bandes de couleur composent un répertoire de signes emprunté aux flancs des pirogues. L'aplat est net, la ligne fermée, sans aucun modelé."
+        },
+        {
+          "title": "L'Œil",
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "image": "images/06-oeil.jpg",
+          "alt": "Grand œil cerné de rouge et de bleu",
+          "description": "Un œil occupe le bas de la toile, cerné de rouge et de bleu profond. Au-dessus, une frise de motifs veille en bande étroite — le regard est à la fois sujet et gardien."
+        }
+      ]
+    },
+    {
+      "id": "visages",
+      "name": "Visages",
+      "works": [
+        {
+          "title": "Signare",
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "image": "images/04-signare.jpg",
+          "alt": "Portrait au foulard et collier de cauris",
+          "description": "Portrait frontal, foulard travaillé en relief et collier de cauris. Derrière elle, le fond éclate en motifs de pirogue : la figure et son héritage tiennent dans le même cadre."
+        },
+        {
+          "title": "Les Trois",
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "image": "images/07-famille.jpg",
+          "alt": "Trois figures aux plans géométriques",
+          "description": "Trois figures se partagent des plans géométriques, un seul œil ouvert au centre. Les visages se recouvrent sans se confondre — une transmission tenue en un seul bloc."
+        }
+      ]
+    }
+  ]
+}
