@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: CartmanRolex/Nalla-Galerie
+  branch: main
+  # Remplacer par l'URL du worker Cloudflare (sans / final).
+  # Voir INSTALLER-LE-CMS.md à la racine du dépôt.
+  base_url: https://sveltia-cms-auth.CHANGEZ-MOI.workers.dev
+
+# Les photos déposées dans l'éditeur atterrissent ici.
+media_folder: images
+public_folder: images
+
+locale: fr
+
+collections:
+  - name: catalogue
+    label: Catalogue
+    files:
+      - name: works
+        label: Œuvres
+        file: works.json
+        format: json
+        description: Les toiles affichées sur la page Œuvres du site.
+        fields:
+          - label: Séries
+            name: series
+            widget: list
+            label_singular: Série
+            summary: '{{fields.name}}'
+            fields:
+              - label: Nom de la série
+                name: name
+                widget: string
+                hint: Affiché en titre, par exemple « Braises ».
+              - label: Identifiant
+                name: id
+                widget: string
+                pattern: ['^[a-z0-9-]+$', 'Minuscules, chiffres et tirets uniquement.']
+                hint: Sans accent ni espace, par exemple « braises ». Sert au lien direct.
+              - label: Œuvres
+                name: works
+                widget: list
+                label_singular: Œuvre
+                summary: '{{fields.title}}'
+                fields:
+                  - label: Titre
+                    name: title
+                    widget: string
+                  - label: Artiste
+                    name: artist
+                    widget: string
+                    default: Nalla Thioye
+                  - label: Technique
+                    name: medium
+                    widget: string
+                    default: Acrylique sur toile
+                    hint: Par exemple « Huile sur toile ».
+                  - label: Photo
+                    name: image
+                    widget: image
+                    media_library:
+                      config:
+                        max_file_size: 5000000
+                  - label: Description courte de l'image
+                    name: alt
+                    widget: string
+                    required: false
+                    hint: Pour les personnes qui ne voient pas l'image.
+                  - label: Description
+                    name: description
+                    widget: text
+                    required: false
+                    hint: Texte affiché quand on clique sur l'œuvre.
