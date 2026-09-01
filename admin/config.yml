@@ -1,10 +1,11 @@
+# ATTENTION : ce bloc est provisoire.
+# DecapBridge génère le bloc « backend » définitif quand on y enregistre
+# le site. Il faut le coller ici tel quel, à la place de celui-ci.
+# Voir INSTALLER-LE-CMS.md à la racine du dépôt.
 backend:
   name: github
   repo: CartmanRolex/Nalla-Galerie
   branch: main
-  # Remplacer par l'URL du worker Cloudflare (sans / final).
-  # Voir INSTALLER-LE-CMS.md à la racine du dépôt.
-  base_url: https://sveltia-cms-auth.CHANGEZ-MOI.workers.dev
 
 # Les photos déposées dans l'éditeur atterrissent ici.
 media_folder: images
@@ -58,9 +59,6 @@ collections:
                   - label: Photo
                     name: image
                     widget: image
-                    media_library:
-                      config:
-                        max_file_size: 5000000
                   - label: Description courte de l'image
                     name: alt
                     widget: string
