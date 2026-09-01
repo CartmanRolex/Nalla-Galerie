@@ -1,0 +1,51 @@
+{
+  "artists": [
+    {
+      "slug": "nalla",
+      "name": "Nalla Thioye",
+      "role": "Artiste visuel · Sénégal",
+      "discipline": "Peinture, gravure · Ngor, Dakar",
+      "intro": "Basé à Ngor, Dakar. Son travail explore l'identité, la mémoire et les expressions culturelles africaines à travers la peinture, la gravure et des compositions symboliques.",
+      "portrait": "images/nalla-portrait.jpg",
+      "portrait_alt": "Nalla Thioye assis devant son atelier, veste tachée de peinture, une toile sur chevalet derrière lui",
+      "portrait_credit": "Photo · Toxik Photography",
+      "highlight_tag": "2026 · Biennale de Venise",
+      "highlight_text": "Participation sur le thème <em>Fissures of Light</em> — <em>Diaspora : Dissonances in Fa Minor</em>.",
+      "statement_title": "Note d'intention",
+      "statement": "« Mon travail est ancré dans le mouvement et la transmission culturelle. À travers des portraits et des symboles, j'exprime l'identité africaine, la mémoire collective et la force des héritages. »",
+      "exhibitions": [
+        {
+          "year": "2025",
+          "items": [
+            "Parcours de Dakar — 14ᵉ édition, Dakar",
+            "Exposition à la Galerie Weurseuk",
+            "Foire internationale Art Capital · Salon, Paris"
+          ]
+        },
+        {
+          "year": "2024",
+          "items": [
+            "Dak'Art Biennale OFF — Fondation Léopold Sédar Senghor & Fondazione Donà dalle Rose",
+            "Exposition collective — Centre Culturel de Ngor",
+            "Exposition internationale — Espagne"
+          ]
+        },
+        {
+          "year": "2023",
+          "items": [
+            "Parcours de Dakar — 12ᵉ édition",
+            "Résidence — Loman Art House"
+          ]
+        },
+        {
+          "year": "2022",
+          "items": [
+            "Dak'Art OFF — La Symphonie des Arts"
+          ]
+        }
+      ],
+      "phone": "+221 77 681 77 15",
+      "email": "thioyenalla925@gmail.com"
+    }
+  ]
+}

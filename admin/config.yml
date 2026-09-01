@@ -38,6 +38,101 @@ public_folder: images
 locale: fr
 
 collections:
+  - name: artistes
+    label: Artistes
+    files:
+      - name: artists
+        label: Fiches artistes
+        file: artists.json
+        format: json
+        description: Les pages artistes du site.
+        fields:
+          - label: Artistes
+            name: artists
+            widget: list
+            label_singular: Artiste
+            summary: '{{fields.name}}'
+            fields:
+              - label: Nom
+                name: name
+                widget: string
+              - label: Identifiant de page
+                name: slug
+                widget: string
+                pattern: ['^[a-z0-9-]+$', 'Minuscules, chiffres et tirets uniquement.']
+                hint: Doit correspondre au nom du fichier, par exemple « nalla » pour nalla.html.
+              - label: Sous-titre
+                name: role
+                widget: string
+                hint: Affiché au-dessus du nom, par exemple « Artiste visuel · Sénégal ».
+              - label: Discipline et ville
+                name: discipline
+                widget: string
+                required: false
+                hint: Affiché sur la page Artistes, par exemple « Peinture, gravure · Ngor, Dakar ».
+              - label: Présentation
+                name: intro
+                widget: text
+                required: false
+              - label: Portrait
+                name: portrait
+                widget: image
+                required: false
+              - label: Description du portrait
+                name: portrait_alt
+                widget: string
+                required: false
+                hint: Pour les personnes qui ne voient pas l'image.
+              - label: Crédit photo
+                name: portrait_credit
+                widget: string
+                required: false
+              - label: Encart — étiquette
+                name: highlight_tag
+                widget: string
+                required: false
+                hint: Laisser vide pour masquer l'encart doré.
+              - label: Encart — texte
+                name: highlight_text
+                widget: text
+                required: false
+                hint: Les balises <em>…</em> mettent en italique.
+              - label: Titre du texte d'intention
+                name: statement_title
+                widget: string
+                required: false
+                default: Note d'intention
+              - label: Texte d'intention
+                name: statement
+                widget: text
+                required: false
+              - label: Expositions
+                name: exhibitions
+                widget: list
+                required: false
+                label_singular: Année
+                summary: '{{fields.year}}'
+                fields:
+                  - label: Année
+                    name: year
+                    widget: string
+                  - label: Lignes
+                    name: items
+                    widget: list
+                    field:
+                      label: Exposition
+                      name: item
+                      widget: string
+              - label: Téléphone
+                name: phone
+                widget: string
+                required: false
+                hint: Sert aussi au lien WhatsApp.
+              - label: Email
+                name: email
+                widget: string
+                required: false
+
   - name: catalogue
     label: Catalogue
     files:
