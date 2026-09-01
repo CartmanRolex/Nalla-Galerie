@@ -69,9 +69,8 @@ a{color:inherit}
 
 .eyebrow{
   font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
-  display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem;
+  margin-bottom:1.4rem;
 }
-.eyebrow::after{content:"";height:1px;width:clamp(40px,10vw,120px);background:var(--gold-deep)}
 
 /* ---------- page header (sous-pages) ---------- */
 .page-head{padding-block:clamp(3rem,7vw,5rem) clamp(2rem,4vw,3rem);border-bottom:1px solid var(--rule)}
