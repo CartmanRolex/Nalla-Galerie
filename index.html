@@ -4,244 +4,63 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Nalla · Galerie</title>
-<meta name="description" content="Galerie de Nalla — peintures à l'huile et acryliques. Braises, pavois de pirogues et visages du Sénégal."/>
+<meta name="description" content="Galerie de Nalla, peintre à Dakar. Braises à l'huile, pavois de pirogues et visages du Sénégal."/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 70'><path d='M30 2 L56 14 L56 38 Q56 56 30 68 Q4 56 4 38 L4 14 Z' fill='%23E8CB8C'/><text x='30' y='45' font-family='serif' font-size='30' font-weight='700' fill='%231A0C0C' text-anchor='middle'>N</text></svg>"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --ink:#1A0C0C;
-  --panel:#2A1414;
-  --panel-2:#3A1E1E;
-  --gold:#E8CB8C;
-  --gold-deep:#9C7A2E;
-  --cream:#FBF6EC;
-  --muted:#B59E9B;
-  --rule:rgba(232,203,140,.22);
-  --display:'Cormorant Garamond',Georgia,serif;
-  --body:'Inter',system-ui,-apple-system,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-y:scroll}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
-body{
-  background:var(--ink);color:var(--cream);
-  font-family:var(--body);font-weight:300;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-::selection{background:var(--gold);color:var(--ink)}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-
-.wrap{width:min(1180px,92vw);margin-inline:auto}
-
-/* ---------- nav ---------- */
-.nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(26,12,12,.82);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--rule);
-}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{font-family:var(--display);font-size:1.5rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--gold)}
-.brand span{color:var(--cream);font-weight:300}
-.nav-links{display:flex;gap:2.25rem;list-style:none}
-.nav-links a{
-  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;
-  text-decoration:none;color:var(--muted);padding-bottom:3px;
-  border-bottom:1px solid transparent;transition:color .25s,border-color .25s;
-}
-.nav-links a:hover{color:var(--gold);border-color:var(--gold)}
-@media(max-width:720px){.nav-links{gap:1.1rem}.nav-links a{font-size:.62rem;letter-spacing:.1em}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden}
-.hero-img{position:absolute;inset:0}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(1.05)}
-.hero-img::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(26,12,12,.55) 0%,rgba(26,12,12,.25) 38%,rgba(26,12,12,.92) 88%,var(--ink) 100%);
-}
-.hero-in{position:relative;padding-block:0 clamp(3rem,7vw,5.5rem)}
-.eyebrow{
-  font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);
-  display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem;
-}
-.eyebrow::after{content:"";height:1px;width:clamp(40px,10vw,120px);background:var(--gold-deep)}
-.hero h1{
-  font-family:var(--display);font-weight:300;
-  font-size:clamp(3rem,9vw,6.5rem);line-height:.98;letter-spacing:-.015em;
-  text-shadow:0 2px 40px rgba(26,12,12,.6);
-}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero p{
-  margin-top:1.5rem;max-width:46ch;color:#E4D8D4;
-  font-size:clamp(.95rem,1.6vw,1.08rem);
-}
-
-/* ---------- sections ---------- */
-.section{padding-block:clamp(4.5rem,10vw,7.5rem)}
-.section-head{margin-bottom:clamp(2.5rem,5vw,3.5rem)}
-.section-head h2{
-  font-family:var(--display);font-weight:400;
-  font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;
-}
-.section-head .lead{margin-top:.9rem;max-width:56ch;color:var(--muted)}
-
-/* ---------- series + works ---------- */
-.serie{margin-bottom:clamp(3.5rem,7vw,5.5rem)}
-.serie:last-child{margin-bottom:0}
-.serie-bar{
-  display:flex;align-items:baseline;gap:1.1rem;
-  padding-bottom:.8rem;margin-bottom:2rem;border-bottom:1px solid var(--rule);
-}
-.serie-bar h3{font-family:var(--display);font-size:1.55rem;font-weight:500;letter-spacing:.02em}
-.serie-bar .count{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-left:auto}
-
-.grid{display:grid;gap:clamp(1.5rem,3vw,2.5rem);grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr))}
-.grid.pair{grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))}
-
-.work{background:var(--panel);border:1px solid var(--rule);overflow:hidden}
-.work-img{overflow:hidden;background:var(--panel-2)}
-.work-img img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
-.work:hover .work-img img,.work:focus-within .work-img img{transform:scale(1.045)}
-.work-txt{padding:1.15rem 1.25rem 1.3rem;border-top:1px solid var(--rule)}
-.work-txt h4{font-family:var(--display);font-size:1.3rem;font-weight:500}
-.work-txt .meta{margin-top:.3rem;font-size:.74rem;letter-spacing:.08em;color:var(--muted)}
-
-/* ---------- about ---------- */
-.about{background:var(--panel);border-block:1px solid var(--rule)}
-.about-grid{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr;align-items:center}
-@media(min-width:900px){.about-grid{grid-template-columns:.85fr 1.15fr}}
-.about-portrait{border:1px solid var(--rule)}
-.about-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.about h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.5vw,2.9rem);line-height:1.12}
-.about p{margin-top:1.2rem;color:#E4D8D4;max-width:60ch}
-.about p+p{margin-top:1rem}
-
-/* ---------- contact ---------- */
-.contact{text-align:center}
-.contact h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.1}
-.contact p{margin-top:1rem;color:var(--muted)}
-.mail{
-  display:inline-block;margin-top:2.2rem;
-  font-family:var(--display);font-size:clamp(1.35rem,3.4vw,2rem);font-style:italic;
-  color:var(--gold);text-decoration:none;
-  border-bottom:1px solid var(--gold-deep);padding-bottom:.25rem;
-  transition:border-color .3s,opacity .3s;
-}
-.mail:hover{border-color:var(--gold);opacity:.85}
-
-/* ---------- footer ---------- */
-.foot{border-top:1px solid var(--rule);padding-block:2.2rem}
-.foot-in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;
-  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-
-/* ---------- reveal ---------- */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
-</style>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="#top">Nalla <span>Galerie</span></a>
+    <a class="brand" href="index.html">Nalla <span>Galerie</span></a>
     <nav>
       <ul class="nav-links">
-        <li><a href="#oeuvres">Œuvres</a></li>
-        <li><a href="#atelier">Atelier</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="oeuvres.html">Œuvres</a></li>
+        <li><a href="artiste.html">L'artiste</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
 
   <section class="hero">
     <div class="hero-img"><img src="images/01-rouge-i.jpg" alt="Braise I, détail — huile sur toile"/></div>
     <div class="wrap hero-in">
-      <p class="eyebrow">Peintures · Sénégal</p>
+      <p class="eyebrow">Peintures · Dakar</p>
       <h1>La couleur<br/>comme <em>récit</em></h1>
-      <p>Braises à l'huile, pavois de pirogues, visages de la côte. Sept toiles, trois séries, un même geste.</p>
+      <p class="intro">Braises à l'huile, pavois de pirogues, visages de la côte. Sept toiles, trois séries, un même geste.</p>
+      <div class="cta-row">
+        <a class="btn" href="oeuvres.html">Voir les œuvres</a>
+        <a class="btn ghost" href="artiste.html">Rencontrer Nalla</a>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="oeuvres">
+  <section class="section">
     <div class="wrap">
       <div class="section-head rv">
-        <h2>Les œuvres</h2>
-        <p class="lead">Chaque toile est une pièce unique, signée. Les dimensions et disponibilités sont communiquées sur demande.</p>
+        <h2>Trois séries</h2>
+        <p class="lead">Deux gestes cohabitent dans ce travail : l'huile posée épaisse et laissée couler, et l'aplat net aux motifs empruntés aux coques de pirogues.</p>
       </div>
-
-      <div class="serie rv">
-        <div class="serie-bar"><h3>Braises</h3><span class="count">2 toiles</span></div>
-        <div class="grid pair">
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/01-rouge-i.jpg" alt="Braise I — masse rouge travaillée au couteau, éclats jaunes"/></div>
-            <figcaption class="work-txt"><h4>Braise I</h4><p class="meta">Huile sur toile</p></figcaption>
-          </figure>
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/02-rouge-ii.jpg" alt="Braise II — coulures rouges et colonne de jaune"/></div>
-            <figcaption class="work-txt"><h4>Braise II</h4><p class="meta">Huile sur toile</p></figcaption>
-          </figure>
-        </div>
+      <div class="grid rv">
+        <a class="work" href="oeuvres.html#braises" style="text-decoration:none">
+          <div class="work-img"><img loading="lazy" src="images/02-rouge-ii.jpg" alt="Braise II — coulures rouges et colonne de jaune"/></div>
+          <div class="work-txt"><h3>Braises</h3><p class="meta">2 toiles · Huile</p></div>
+        </a>
+        <a class="work" href="oeuvres.html#pavois" style="text-decoration:none">
+          <div class="work-img"><img loading="lazy" src="images/03-pirogues.jpg" alt="Pirogues à quai — coques peintes en diagonale"/></div>
+          <div class="work-txt"><h3>Pavois</h3><p class="meta">3 toiles · Acrylique</p></div>
+        </a>
+        <a class="work" href="oeuvres.html#visages" style="text-decoration:none">
+          <div class="work-img"><img loading="lazy" src="images/04-signare.jpg" alt="Signare — portrait au foulard et collier de cauris"/></div>
+          <div class="work-txt"><h3>Visages</h3><p class="meta">2 toiles · Acrylique</p></div>
+        </a>
       </div>
-
-      <div class="serie rv">
-        <div class="serie-bar"><h3>Pavois</h3><span class="count">3 toiles</span></div>
-        <div class="grid">
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/03-pirogues.jpg" alt="Pirogues à quai — coques peintes en diagonale"/></div>
-            <figcaption class="work-txt"><h4>Pirogues à quai</h4><p class="meta">Acrylique sur toile</p></figcaption>
-          </figure>
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/05-motifs.jpg" alt="Pavois — rosaces et bandes de couleur"/></div>
-            <figcaption class="work-txt"><h4>Pavois</h4><p class="meta">Acrylique sur toile</p></figcaption>
-          </figure>
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/06-oeil.jpg" alt="L'Œil — grand œil cerné de rouge et de bleu"/></div>
-            <figcaption class="work-txt"><h4>L'Œil</h4><p class="meta">Acrylique sur toile</p></figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="serie rv">
-        <div class="serie-bar"><h3>Visages</h3><span class="count">2 toiles</span></div>
-        <div class="grid pair">
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/04-signare.jpg" alt="Signare — portrait au foulard et collier de cauris"/></div>
-            <figcaption class="work-txt"><h4>Signare</h4><p class="meta">Acrylique sur toile</p></figcaption>
-          </figure>
-          <figure class="work">
-            <div class="work-img"><img loading="lazy" src="images/07-famille.jpg" alt="Les Trois — trois figures aux plans géométriques"/></div>
-            <figcaption class="work-txt"><h4>Les Trois</h4><p class="meta">Acrylique sur toile</p></figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section about" id="atelier">
-    <div class="wrap about-grid">
-      <div class="about-portrait rv"><img loading="lazy" src="images/04-signare.jpg" alt="Signare, détail"/></div>
-      <div class="rv">
-        <h2>L'atelier</h2>
-        <p>Deux gestes cohabitent dans ce travail. D'un côté l'huile posée épaisse, grattée, laissée couler — la matière garde la trace de la main et la lumière s'y accroche. De l'autre l'aplat net, la ligne fermée, les motifs empruntés aux coques de pirogues et aux tissus.</p>
-        <p>Ce que les deux partagent : le rouge, l'or, et une manière de faire tenir ensemble la mémoire d'une côte et la liberté de la peinture.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact" id="contact">
-    <div class="wrap">
-      <h2>Visiter l'atelier</h2>
-      <p>Pour une visite, une acquisition ou un projet d'exposition.</p>
-      <a class="mail" href="mailto:contact@example.com">contact@example.com</a>
     </div>
   </section>
 
@@ -249,24 +68,11 @@ a{color:inherit}
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <span>Nalla Galerie</span>
-    <span>© 2026 — Tous droits réservés</span>
+    <span>Nalla Galerie · Dakar</span>
+    <a href="tel:+221776817715">+221 77 681 77 15</a>
   </div>
 </footer>
 
-<script>
-(function(){
-  var els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(e){e.classList.add('in')});return;
-  }
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
-    });
-  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
-  els.forEach(function(e){io.observe(e)});
-})();
-</script>
+<script src="reveal.js"></script>
 </body>
 </html>
