@@ -1,7 +1,7 @@
 {
   "series": [
     {
-      "name": "Braises",
+      "name": "Mafijaroon ",
       "works": [
         {
           "title": "Vague rouge |",
@@ -16,8 +16,8 @@
           "artist": "Nalla Thioye",
           "medium": "Huile sur toile",
           "image": "images/02-rouge-ii.jpg",
-          "alt": "Coulures rouges et colonne de jaune",
-          "description": "Les coulures descendent en rideau sur toute la hauteur de la toile. Une colonne de jaune traverse le rouge sombre, comme une trouée de lumière dans la combustion."
+          "alt": "Couleurs rouges et colonne de jaune",
+          "description": "Les couleurs descendent en rideau sur toute la hauteur de la toile. Une colonne de jaune traverse le rouge sombre, comme une trouée de lumière dans la combustion."
         }
       ]
     },
@@ -51,23 +51,23 @@
       ]
     },
     {
-      "name": "Visages",
+      "name": "Sunu Thiossane ",
       "works": [
         {
-          "title": "Signare",
-          "artist": "Nalla Thioye",
-          "medium": "Acrylique sur toile",
-          "image": "images/04-signare.jpg",
-          "alt": "Portrait au foulard et collier de cauris",
-          "description": "Portrait frontal, foulard travaillé en relief et collier de cauris. Derrière elle, le fond éclate en motifs de pirogue : la figure et son héritage tiennent dans le même cadre."
-        },
-        {
-          "title": "Les Trois",
+          "title": "MIRROR IDENTITÉ",
           "artist": "Nalla Thioye",
           "medium": "Acrylique sur toile",
           "image": "images/07-famille.jpg",
           "alt": "Trois figures aux plans géométriques",
-          "description": "Trois figures se partagent des plans géométriques, un seul œil ouvert au centre. Les visages se recouvrent sans se confondre — une transmission tenue en un seul bloc."
+          "description": "Un reflet de moi-même, de mon histoire et de mes racines. À travers les regards, les visages et les fragments de couleurs, je questionne l’identité, la mémoire et l’héritage.\nNous sommes faits de plusieurs histoires, plusieurs influences, plusieurs mondes. Parfois, il suffit de regarder dans le miroir pour comprendre que notre identité n’est jamais unique : elle se construit, se transforme et se transmet.\nCette œuvre parle de ce que nous portons en nous, de ce que nous montrons au monde et de ce qui reste caché derrière le regard."
+        },
+        {
+          "artist": "Nalla Thioye",
+          "medium": "Acrylique sur toile",
+          "title": "héritage des couleurs ",
+          "image": "images/d92cfcb9-d6be-4edf-ae2e-d7084544c0ca.jpeg",
+          "alt": "Ce portrait vibrant met en lumière une figure féminine souriante et assurée, exprimant fierté, douceur et résilience. Au cœur de la composition, une richesse est omniprésente, nichée entre le fond coloré et la motivation sous-jacente, évoquant une riche et vibrante tapisserie culturelle.",
+          "description": "Les vêtements et les bijoux – boucles d'oreilles, colliers et ornements – suggèrent une identité profondément rayonnante, enracinée dans la tradition, que j'ai réinterprétée de façon contemporaine par l'utilisation de couleurs intenses et de textures variées. Le vélo, rendu avec une profusion de tons et de mouvement, peut être vu comme une métaphore des souvenirs accumulés, aux influences multiples.\n"
         }
       ]
     }
