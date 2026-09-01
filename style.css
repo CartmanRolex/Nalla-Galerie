@@ -11,7 +11,7 @@
   --body:'Inter',system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-y:scroll}
+html{scroll-behavior:smooth;overflow-y:scroll;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -48,7 +48,21 @@ a{color:inherit}
 }
 .nav-links a:hover{color:var(--gold);border-color:var(--gold)}
 .nav-links a[aria-current="page"]{color:var(--gold);border-color:var(--gold-deep)}
-@media(max-width:720px){.nav-links{gap:1.05rem}.nav-links a{font-size:.62rem;letter-spacing:.1em}.brand{font-size:1.15rem;letter-spacing:.1em}}
+
+/* Sous 880px, la marque et les 4 liens ne tiennent plus sur une ligne :
+   on empile en deux rangées plutôt que de laisser déborder — un débordement
+   horizontal fait dézoomer la page entière sur mobile. */
+@media(max-width:880px){
+  .nav-in{flex-direction:column;height:auto;padding-block:.8rem;gap:.55rem}
+  .brand{font-size:1.2rem;letter-spacing:.11em}
+  .nav-links{flex-wrap:wrap;justify-content:center;gap:.45rem 1.2rem}
+  .nav-links a{font-size:.66rem;letter-spacing:.13em}
+}
+@media(max-width:360px){
+  .brand{font-size:1.05rem;letter-spacing:.08em}
+  .nav-links{gap:.4rem .9rem}
+  .nav-links a{font-size:.6rem;letter-spacing:.1em}
+}
 
 /* ---------- hero (accueil) ---------- */
 .hero{position:relative;min-height:min(86vh,740px);display:flex;align-items:flex-end;overflow:hidden}
