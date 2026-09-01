@@ -56,11 +56,6 @@ collections:
               - label: Nom
                 name: name
                 widget: string
-              - label: Identifiant de page
-                name: slug
-                widget: string
-                pattern: ['^[a-z0-9-]+$', 'Minuscules, chiffres et tirets uniquement.']
-                hint: Doit correspondre au nom du fichier, par exemple « nalla » pour nalla.html.
               - label: Sous-titre
                 name: role
                 widget: string
@@ -152,11 +147,6 @@ collections:
                 name: name
                 widget: string
                 hint: Affiché en titre, par exemple « Braises ».
-              - label: Identifiant
-                name: id
-                widget: string
-                pattern: ['^[a-z0-9-]+$', 'Minuscules, chiffres et tirets uniquement.']
-                hint: Sans accent ni espace, par exemple « braises ». Sert au lien direct.
               - label: Œuvres
                 name: works
                 widget: list

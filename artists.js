@@ -17,6 +17,15 @@
 
   function tel(p) { return String(p || '').replace(/[^0-9+]/g, ''); }
 
+  // L'identifiant de page est déduit du nom : « Nalla Thioye » → « nalla-thioye ».
+  function slugify(s) {
+    return String(s || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   function renderDetail(a) {
     if (!a) {
       detail.innerHTML = '<div class="wrap"><p class="prose">Cet artiste est introuvable. ' +
@@ -86,7 +95,7 @@
 
   function renderList(artists) {
     list.innerHTML = '<div class="grid rv">' + artists.map(function (a) {
-      return '<a class="work" href="' + esc(a.slug) + '.html" style="text-decoration:none">' +
+      return '<a class="work" href="' + esc(slugify(a.name)) + '.html" style="text-decoration:none">' +
         '<div class="work-img"><img loading="lazy" src="' + esc(a.portrait) + '"' +
           ' alt="' + esc(a.portrait_alt || a.name) + '"/></div>' +
         '<div class="work-txt"><h3>' + esc(a.name) + '</h3>' +
@@ -105,7 +114,7 @@
       var artists = (data && data.artists) || [];
       if (detail) {
         var slug = detail.dataset.slug;
-        renderDetail(artists.filter(function (a) { return a.slug === slug; })[0]);
+        renderDetail(artists.filter(function (a) { return slugify(a.name) === slug; })[0]);
       }
       if (list) renderList(artists);
     })

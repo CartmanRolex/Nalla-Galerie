@@ -1,7 +1,6 @@
 {
   "series": [
     {
-      "id": "braises",
       "name": "Braises",
       "works": [
         {
@@ -23,7 +22,6 @@
       ]
     },
     {
-      "id": "pavois",
       "name": "Pavois",
       "works": [
         {
@@ -53,7 +51,6 @@
       ]
     },
     {
-      "id": "visages",
       "name": "Visages",
       "works": [
         {

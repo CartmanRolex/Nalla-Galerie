@@ -10,6 +10,15 @@
 
   function plural(n) { return n + (n > 1 ? ' toiles' : ' toile'); }
 
+  // L'identifiant d'ancre est déduit du nom : « Pavois » → « pavois ».
+  function slugify(s) {
+    return String(s || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
   function mediums(works) {
     var seen = [];
     works.forEach(function (w) {
@@ -43,7 +52,7 @@
       var count = plural(works.length);
       var med = mediums(works);
       return '' +
-        '<div class="serie rv" id="' + esc(s.id) + '">' +
+        '<div class="serie rv" id="' + esc(slugify(s.name)) + '">' +
           '<div class="serie-bar"><h2>' + esc(s.name) + '</h2>' +
           '<span class="count">' + count + (med ? ' · ' + esc(med) : '') + '</span></div>' +
           '<div class="grid' + (works.length === 2 ? ' pair' : '') + '">' + cards + '</div>' +
