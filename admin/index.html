@@ -20,7 +20,7 @@
         height: -webkit-fill-available;
         margin: 0;
       }
-      #nc-root, [class*="AppMainContainer"], [class*="AppRoot"] {
+      #nc-root {
         min-height: -webkit-fill-available;
       }
 
@@ -42,27 +42,9 @@
         padding-bottom: env(safe-area-inset-bottom);
       }
 
-      /* 5. Sur petit écran, les deux colonnes de l'éditeur se chevauchent :
-            on les empile et on laisse la page défiler normalement. */
-      @media (max-width: 800px) {
-        [class*="EditorContainer"],
-        [class*="EditorContent"],
-        [class*="SplitPane"] {
-          display: block !important;
-          height: auto !important;
-          overflow: visible !important;
-        }
-        [class*="ControlPaneContainer"],
-        [class*="PreviewPaneContainer"] {
-          width: 100% !important;
-          max-width: 100% !important;
-          position: static !important;
-        }
-        /* L'aperçu double la hauteur de page sans rien apporter sur mobile. */
-        [class*="PreviewPaneContainer"] {
-          display: none !important;
-        }
-      }
+      /* Ne rien ajouter ici qui vise les classes internes de Decap CMS :
+         elles sont générées et changent d'une version à l'autre. Une tentative
+         de réagencer l'éditeur par ce biais a vidé le formulaire sur Android. */
     </style>
   </head>
   <body>
