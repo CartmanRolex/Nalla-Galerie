@@ -2,9 +2,68 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="robots" content="noindex" />
     <title>Administration · Galerie Weurseuk</title>
+    <style>
+      /* Correctifs pour Safari iOS. L'interface de Decap CMS est conçue
+         pour le bureau ; ces règles corrigent les défauts les plus visibles
+         sur iPhone sans toucher au rendu sur ordinateur. */
+
+      /* 1. Sur iOS, 100vh inclut les barres du navigateur : le bas de
+            l'interface passe sous la barre d'outils et devient inatteignable. */
+      html, body {
+        height: 100%;
+        height: -webkit-fill-available;
+        margin: 0;
+      }
+      #nc-root, [class*="AppMainContainer"], [class*="AppRoot"] {
+        min-height: -webkit-fill-available;
+      }
+
+      /* 2. Safari zoome automatiquement quand un champ fait moins de 16px,
+            ce qui décale toute la mise en page et ne se remet pas droit. */
+      input, textarea, select, [contenteditable="true"] {
+        font-size: 16px !important;
+      }
+
+      /* 3. Empêche l'agrandissement automatique du texte en paysage. */
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* 4. Respecte l'encoche et la barre d'accueil des iPhone récents. */
+      body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+
+      /* 5. Sur petit écran, les deux colonnes de l'éditeur se chevauchent :
+            on les empile et on laisse la page défiler normalement. */
+      @media (max-width: 800px) {
+        [class*="EditorContainer"],
+        [class*="EditorContent"],
+        [class*="SplitPane"] {
+          display: block !important;
+          height: auto !important;
+          overflow: visible !important;
+        }
+        [class*="ControlPaneContainer"],
+        [class*="PreviewPaneContainer"] {
+          width: 100% !important;
+          max-width: 100% !important;
+          position: static !important;
+        }
+        /* L'aperçu double la hauteur de page sans rien apporter sur mobile. */
+        [class*="PreviewPaneContainer"] {
+          display: none !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.8.4/dist/decap-cms.js"></script>
