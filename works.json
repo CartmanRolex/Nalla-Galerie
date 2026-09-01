@@ -4,7 +4,7 @@
       "name": "Braises",
       "works": [
         {
-          "title": "Braise I",
+          "title": "Vague rouge |",
           "artist": "Nalla Thioye",
           "medium": "Huile sur toile",
           "image": "images/01-rouge-i.jpg",
@@ -12,7 +12,7 @@
           "description": "Une masse rouge travaillée au couteau, où la matière garde la trace du geste. Quelques éclats de jaune percent l'épaisseur, et la tranche dorée du châssis referme la composition."
         },
         {
-          "title": "Braise II",
+          "title": "Vague rouge II",
           "artist": "Nalla Thioye",
           "medium": "Huile sur toile",
           "image": "images/02-rouge-ii.jpg",
@@ -22,31 +22,31 @@
       ]
     },
     {
-      "name": "Pavois",
+      "name": "betgaal ",
       "works": [
         {
-          "title": "Pirogues à quai",
+          "title": "Élan des pirogues",
           "artist": "Nalla Thioye",
           "medium": "Acrylique sur toile",
           "image": "images/03-pirogues.jpg",
           "alt": "Coques de pirogues peintes, rangées en diagonale",
-          "description": "Les coques peintes se rangent en diagonale, serrées les unes contre les autres. Chaque bordé porte ses motifs, ses vagues et ses couleurs — la signature d'un pêcheur autant qu'un décor."
+          "description": "Ce tableau abstrait, riche en couleurs vives et en formes dynamiques, évoque un voyage à la fois physique et symbolique. Les bandes diagonales qui traversent la composition suggèrent le mouvement, la traversée, voire la dispersion. "
         },
         {
-          "title": "Pavois",
+          "title": "Les Gardiens du Mot",
           "artist": "Nalla Thioye",
           "medium": "Acrylique sur toile",
           "image": "images/05-motifs.jpg",
-          "alt": "Rosaces et bandes de couleur",
-          "description": "Rosaces, cibles et bandes de couleur composent un répertoire de signes emprunté aux flancs des pirogues. L'aplat est net, la ligne fermée, sans aucun modelé."
+          "alt": "construit une architecture de signes où l’écriture, les symboles et les formes géométriques deviennent les fragments d’un langage ancien.",
+          "description": ". L’œuvre\névoque un espace spirituel où les motifs agissent comme des gardiens silencieux d’une mémoire\ncollective."
         },
         {
-          "title": "L'Œil",
+          "title": "L'Œil du voyage ",
           "artist": "Nalla Thioye",
           "medium": "Acrylique sur toile",
           "image": "images/06-oeil.jpg",
           "alt": "Grand œil cerné de rouge et de bleu",
-          "description": "Un œil occupe le bas de la toile, cerné de rouge et de bleu profond. Au-dessus, une frise de motifs veille en bande étroite — le regard est à la fois sujet et gardien."
+          "description": "Cette œuvre explore la vision, la mémoire et le déplacement. Inspiré par l’œil des pirogues sénégalaises, symbole de protection et d’ouverture, le tableau devient une porte entre tradition, identité et imagination. Les couleurs vibrantes et les formes géométriques traduisent un voyage culturel et spirituel en mouvement."
         }
       ]
     },
