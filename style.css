@@ -77,6 +77,9 @@ a{color:inherit}
 .page-head h1{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,6.5vw,4.2rem);line-height:1.05}
 .page-head .lead{margin-top:1.1rem;max-width:58ch;color:var(--muted)}
 
+/* ---------- prose ---------- */
+.prose{color:#E4D8D4;max-width:64ch;font-size:1rem}
+
 /* ---------- badge ---------- */
 .badge{
   margin-top:2.2rem;padding:1.3rem 1.6rem;
