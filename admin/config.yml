@@ -65,6 +65,11 @@ collections:
                 widget: string
                 required: false
                 hint: Affiché sur la page Artistes, par exemple « Peinture, gravure · Ngor, Dakar ».
+              - label: Lieu et pays
+                name: location
+                widget: string
+                required: false
+                hint: Affiché dans la section contact, par exemple « Ngor, Dakar — Sénégal ».
               - label: Présentation
                 name: intro
                 widget: text

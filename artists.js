@@ -33,6 +33,10 @@
       return;
     }
     document.title = a.name + ' · Galerie Weurseuk';
+    var metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', a.intro || a.role || a.name);
+    }
 
     var head =
       '<section class="page-head"><div class="wrap">' +
@@ -85,7 +89,8 @@
     var contact = !lines ? '' :
       '<section class="section contact"><div class="wrap">' +
         '<h2>Contact</h2>' +
-        '<p>Ngor, Dakar — Sénégal. Pour une visite, une acquisition ou un projet d\'exposition.</p>' +
+        '<p>' + (a.location ? esc(a.location) + '. ' : '') +
+          'Pour une visite, une acquisition ou un projet d\'exposition.</p>' +
         '<div class="lines">' + lines + '</div>' +
       '</div></section>';
 
