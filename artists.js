@@ -116,6 +116,15 @@
       return r.json();
     })
     .then(function (data) {
+      var pageFields = {
+        'artists-eyebrow': data.eyebrow,
+        'artists-title': data.page_title,
+        'artists-intro': data.page_intro
+      };
+      Object.keys(pageFields).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = pageFields[id] || '';
+      });
       var artists = (data && data.artists) || [];
       if (detail) {
         var slug = detail.dataset.slug;

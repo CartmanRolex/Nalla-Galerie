@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Art contemporain · Dakar",
+  "title": "La galerie",
+  "intro": "Un espace dédié à la promotion de l'art contemporain et à la découverte de nouveaux talents. Au cœur de Dakar, un lieu de rencontre pour les artistes, les amateurs d'art et les curieux.",
+  "sections": [
+    {
+      "title": "Notre mission",
+      "text": "Nous nous engageons à promouvoir la diversité culturelle et à encourager la créativité sous toutes ses formes. La galerie est un espace ouvert à tous, où les artistes exposent leurs œuvres et partagent leur vision du monde.",
+      "button_label": "",
+      "button_url": ""
+    },
+    {
+      "title": "Nos expositions",
+      "text": "Nous organisons régulièrement des expositions temporaires et permanentes, mettant en valeur les œuvres d'artistes locaux et internationaux. De la peinture à la sculpture, de la gravure à la photographie et aux installations, nous proposons une variété de styles et de techniques.",
+      "button_label": "Voir les œuvres exposées",
+      "button_url": "oeuvres.html"
+    }
+  ],
+  "contact_title": "Visitez-nous",
+  "contact_text": "Pour une visite, une acquisition ou un projet d'exposition.",
+  "whatsapp_label": "Nous écrire"
+}

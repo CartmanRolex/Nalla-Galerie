@@ -38,6 +38,25 @@ public_folder: images
 locale: fr
 
 collections:
+  - name: reglages
+    label: Réglages du site
+    files:
+      - name: site
+        label: Identité et coordonnées
+        file: site.json
+        format: json
+        fields:
+          - { label: Nom du site, name: name, widget: string }
+          - { label: Ville ou quartier, name: location, widget: string, required: false }
+          - { label: Pays, name: country, widget: string, required: false }
+          - { label: Téléphone, name: phone, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - label: Numéro WhatsApp
+            name: whatsapp
+            widget: string
+            required: false
+            hint: Chiffres uniquement avec l'indicatif du pays, par exemple 221776817715.
+
   - name: artistes
     label: Artistes
     files:
@@ -47,6 +66,9 @@ collections:
         format: json
         description: Les pages artistes du site.
         fields:
+          - { label: Page Artistes — petit titre, name: eyebrow, widget: string, required: false }
+          - { label: Page Artistes — titre, name: page_title, widget: string }
+          - { label: Page Artistes — introduction, name: page_intro, widget: text, required: false }
           - label: Artistes
             name: artists
             widget: list
@@ -142,6 +164,11 @@ collections:
         format: json
         description: Les toiles affichées sur la page Œuvres du site.
         fields:
+          - { label: Page Œuvres — petit titre, name: eyebrow, widget: string, required: false }
+          - { label: Page Œuvres — titre, name: page_title, widget: string }
+          - { label: Page Œuvres — introduction, name: page_intro, widget: text, required: false }
+          - { label: Contact — titre, name: contact_title, widget: string, required: false }
+          - { label: Contact — texte, name: contact_text, widget: text, required: false }
           - label: Séries
             name: series
             widget: list
@@ -183,10 +210,61 @@ collections:
                     widget: text
                     required: false
                     hint: Texte affiché quand on clique sur l'œuvre.
+                  - { label: Dimensions, name: dimensions, widget: string, required: false }
+                  - { label: Année, name: year, widget: string, required: false }
+                  - { label: Prix, name: price, widget: string, required: false, hint: Laisser vide pour ne rien afficher. }
+                  - label: Disponibilité
+                    name: availability
+                    widget: select
+                    required: false
+                    options: [Disponible, Réservée, Vendue]
+                  - { label: Référence, name: reference, widget: string, required: false }
 
   - name: pages
     label: Pages
     files:
+      - name: homepage
+        label: Accueil
+        file: homepage.json
+        format: json
+        fields:
+          - { label: Grande image, name: hero_image, widget: image }
+          - { label: Description de l'image, name: hero_alt, widget: string, required: false }
+          - { label: Petit titre, name: eyebrow, widget: string, required: false }
+          - { label: Titre principal, name: title, widget: string }
+          - { label: Partie du titre en italique, name: title_emphasis, widget: string, required: false }
+          - { label: Introduction, name: intro, widget: text, required: false }
+          - { label: Premier bouton — texte, name: primary_label, widget: string, required: false }
+          - { label: Premier bouton — lien, name: primary_url, widget: string, required: false }
+          - { label: Deuxième bouton — texte, name: secondary_label, widget: string, required: false }
+          - { label: Deuxième bouton — lien, name: secondary_url, widget: string, required: false }
+          - { label: Bloc rencontre — titre, name: meeting_title, widget: string, required: false }
+          - { label: Bloc rencontre — texte, name: meeting_text, widget: text, required: false }
+          - { label: Bloc rencontre — bouton, name: meeting_label, widget: string, required: false }
+          - { label: Bloc rencontre — lien, name: meeting_url, widget: string, required: false }
+          - { label: Titre des séries mises en avant, name: featured_label, widget: string, required: false }
+      - name: gallery
+        label: La galerie
+        file: gallery.json
+        format: json
+        fields:
+          - { label: Petit titre, name: eyebrow, widget: string, required: false }
+          - { label: Titre principal, name: title, widget: string }
+          - { label: Introduction, name: intro, widget: text, required: false }
+          - label: Blocs de contenu
+            name: sections
+            widget: list
+            required: false
+            label_singular: Bloc
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Titre, name: title, widget: string }
+              - { label: Texte, name: text, widget: text, required: false }
+              - { label: Bouton — texte, name: button_label, widget: string, required: false }
+              - { label: Bouton — lien, name: button_url, widget: string, required: false }
+          - { label: Contact — titre, name: contact_title, widget: string, required: false }
+          - { label: Contact — texte, name: contact_text, widget: text, required: false }
+          - { label: WhatsApp — texte du lien, name: whatsapp_label, widget: string, required: false }
       - name: atelier
         label: Atelier
         file: atelier.json

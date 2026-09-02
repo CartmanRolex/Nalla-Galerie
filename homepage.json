@@ -1,0 +1,17 @@
+{
+  "hero_image": "images/01-rouge-i.jpg",
+  "hero_alt": "Braise I, détail — huile sur toile",
+  "eyebrow": "Art contemporain · Ngor, Dakar",
+  "title": "La couleur",
+  "title_emphasis": "comme récit",
+  "intro": "Un espace dédié à la promotion de l'art contemporain et à la découverte de nouveaux talents, au cœur de Dakar.",
+  "primary_label": "Voir les œuvres",
+  "primary_url": "oeuvres.html",
+  "secondary_label": "La galerie",
+  "secondary_url": "galerie.html",
+  "meeting_title": "Un lieu de rencontre",
+  "meeting_text": "La Galerie Weurseuk réunit artistes, amateurs d'art et curieux. Expositions temporaires et permanentes, artistes locaux et internationaux, de la peinture à la gravure et à l'installation.",
+  "meeting_label": "Notre mission",
+  "meeting_url": "galerie.html",
+  "featured_label": "À l'affiche"
+}

@@ -31,15 +31,15 @@
 
 <main>
 
-  <section class="hero">
-    <div class="hero-img"><img src="images/01-rouge-i.jpg" alt="Braise I, détail — huile sur toile"/></div>
+  <section class="hero" id="home-hero">
+    <div class="hero-img"><img id="home-hero-image" src="images/01-rouge-i.jpg" alt="Braise I, détail — huile sur toile"/></div>
     <div class="wrap hero-in">
-      <p class="eyebrow">Art contemporain · Ngor, Dakar</p>
-      <h1>La couleur<br/>comme <em>récit</em></h1>
-      <p class="intro">Un espace dédié à la promotion de l'art contemporain et à la découverte de nouveaux talents, au cœur de Dakar.</p>
+      <p class="eyebrow" id="home-eyebrow">Art contemporain · Ngor, Dakar</p>
+      <h1 id="home-title">La couleur<br/>comme <em>récit</em></h1>
+      <p class="intro" id="home-intro">Un espace dédié à la promotion de l'art contemporain et à la découverte de nouveaux talents, au cœur de Dakar.</p>
       <div class="cta-row">
-        <a class="btn" href="oeuvres.html">Voir les œuvres</a>
-        <a class="btn ghost" href="galerie.html">La galerie</a>
+        <a class="btn" id="home-primary" href="oeuvres.html">Voir les œuvres</a>
+        <a class="btn ghost" id="home-secondary" href="galerie.html">La galerie</a>
       </div>
     </div>
   </section>
@@ -47,10 +47,10 @@
   <section class="section">
     <div class="wrap">
       <div class="section-head rv">
-        <h2>Un lieu de rencontre</h2>
-        <p class="lead">La Galerie Weurseuk réunit artistes, amateurs d'art et curieux. Expositions temporaires et permanentes, artistes locaux et internationaux, de la peinture à la gravure et à l'installation.</p>
+        <h2 id="home-meeting-title">Un lieu de rencontre</h2>
+        <p class="lead" id="home-meeting-text">La Galerie Weurseuk réunit artistes, amateurs d'art et curieux. Expositions temporaires et permanentes, artistes locaux et internationaux, de la peinture à la gravure et à l'installation.</p>
         <div class="cta-row">
-          <a class="btn ghost" href="galerie.html">Notre mission</a>
+          <a class="btn ghost" id="home-meeting-button" href="galerie.html">Notre mission</a>
         </div>
       </div>
     </div>
@@ -64,11 +64,12 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <span>Galerie Weurseuk · Ngor, Dakar</span>
-    <a href="tel:+221776817715">+221 77 681 77 15</a>
+    <span data-site-location>Galerie Weurseuk · Ngor, Dakar</span>
+    <a data-site-phone href="tel:+221776817715">+221 77 681 77 15</a>
   </div>
 </footer>
 
+<script src="site.js"></script>
 <script src="home.js"></script>
 <script src="reveal.js"></script>
 </body>

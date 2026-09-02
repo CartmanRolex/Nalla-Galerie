@@ -33,9 +33,9 @@
 
   <section class="page-head">
     <div class="wrap">
-      <p class="eyebrow">Catalogue</p>
-      <h1>Les œuvres</h1>
-      <p class="lead">Chaque toile est une pièce unique, signée. Dimensions et disponibilité communiquées sur demande.</p>
+      <p class="eyebrow" id="works-eyebrow">Catalogue</p>
+      <h1 id="works-title">Les œuvres</h1>
+      <p class="lead" id="works-intro">Chaque toile est une pièce unique, signée. Dimensions et disponibilité communiquées sur demande.</p>
     </div>
   </section>
 
@@ -50,10 +50,10 @@
 
   <section class="section contact" style="padding-top:0">
     <div class="wrap">
-      <h2>Une toile vous intéresse ?</h2>
-      <p>La galerie vous répond par téléphone ou WhatsApp.</p>
+      <h2 id="works-contact-title">Une toile vous intéresse ?</h2>
+      <p id="works-contact-text">La galerie vous répond par téléphone ou WhatsApp.</p>
       <div class="lines">
-        <a class="line" href="tel:+221776817715"><span class="line-label">Téléphone</span>+221 77 681 77 15</a>
+        <a class="line" data-site-phone-link href="tel:+221776817715"><span class="line-label">Téléphone</span><span data-site-phone>+221 77 681 77 15</span></a>
       </div>
     </div>
   </section>
@@ -62,11 +62,12 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <span>Galerie Weurseuk · Ngor, Dakar</span>
+    <span data-site-location>Galerie Weurseuk · Ngor, Dakar</span>
     <a href="artistes.html">Artistes</a>
   </div>
 </footer>
 
+<script src="site.js"></script>
 <script src="works.js"></script>
 <script src="reveal.js"></script>
 <script src="lightbox.js"></script>
