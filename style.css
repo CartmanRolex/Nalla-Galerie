@@ -49,10 +49,10 @@ a{color:inherit}
 .nav-links a:hover{color:var(--gold);border-color:var(--gold)}
 .nav-links a[aria-current="page"]{color:var(--gold);border-color:var(--gold-deep)}
 
-/* Sous 880px, la marque et les 4 liens ne tiennent plus sur une ligne :
+/* Sous 1050px, la marque et les liens ne tiennent plus sur une ligne :
    on empile en deux rangées plutôt que de laisser déborder — un débordement
    horizontal fait dézoomer la page entière sur mobile. */
-@media(max-width:880px){
+@media(max-width:1050px){
   .nav-in{flex-direction:column;height:auto;padding-block:.8rem;gap:.55rem}
   .brand{font-size:1.2rem;letter-spacing:.11em}
   .nav-links{flex-wrap:wrap;justify-content:center;gap:.45rem 1.2rem}
@@ -93,6 +93,27 @@ a{color:inherit}
 
 /* ---------- prose ---------- */
 .prose{color:#E4D8D4;max-width:64ch;font-size:1rem}
+
+/* ---------- pages éditoriales ---------- */
+.content-blocks{display:flex;flex-direction:column;gap:clamp(4rem,8vw,6rem)}
+.content-block{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
+.content-block.has-image{grid-template-columns:minmax(0,1fr) minmax(280px,.85fr)}
+.content-block:nth-child(even) .content-visual{order:-1}
+.content-copy h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1}
+.content-copy p{margin-top:1.1rem;color:#E4D8D4;max-width:62ch;white-space:pre-line}
+.content-visual{border:1px solid var(--rule);background:var(--panel-2)}
+.content-visual img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.content-visual figcaption,.editorial-gallery figcaption{padding:.7rem .9rem;font-size:.68rem;letter-spacing:.1em;color:var(--muted)}
+.editorial-gallery{margin-top:clamp(4rem,8vw,6rem)}
+.editorial-gallery .work-img img{aspect-ratio:1/1}
+.editorial-cta{margin-top:clamp(4rem,8vw,6rem);padding:clamp(2rem,5vw,4rem);text-align:center;background:var(--panel);border:1px solid var(--rule)}
+.editorial-cta h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,5vw,3.4rem)}
+.editorial-cta p{margin:1rem auto 0;color:var(--muted);max-width:56ch;white-space:pre-line}
+.editorial-cta .cta-row{justify-content:center}
+@media(max-width:760px){
+  .content-block.has-image{grid-template-columns:1fr}
+  .content-block:nth-child(even) .content-visual{order:0}
+}
 
 /* ---------- badge ---------- */
 .badge{

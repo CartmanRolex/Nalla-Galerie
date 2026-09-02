@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Pièces uniques · Sur commande",
+  "title": "Customisation de vêtements",
+  "intro": "Des vêtements transformés à la main en pièces uniques, à porter comme des œuvres.",
+  "sections": [
+    {
+      "title": "Votre vêtement, une création unique",
+      "text": "Vestes, chemises, pantalons et accessoires deviennent des supports d'expression. Chaque customisation est imaginée selon la pièce, vos envies et l'univers de l'artiste.",
+      "image": "images/05-motifs.jpg",
+      "image_alt": "Motifs colorés servant d'inspiration aux vêtements personnalisés",
+      "caption": "Couleurs et motifs peints à la main"
+    },
+    {
+      "title": "Comment commander ?",
+      "text": "Envoyez une photo du vêtement et décrivez votre idée. Nous échangeons sur les couleurs, les motifs, le délai et le tarif avant de commencer la création.",
+      "image": "images/03-pirogues.jpg",
+      "image_alt": "Palette de motifs géométriques et colorés",
+      "caption": "Une personnalisation conçue avec vous"
+    }
+  ],
+  "gallery": [],
+  "cta_title": "Créer votre pièce",
+  "cta_text": "Présentez-nous votre vêtement et votre idée par e-mail.",
+  "cta_label": "Demander une customisation",
+  "cta_url": "mailto:thioyenalla925@gmail.com"
+}

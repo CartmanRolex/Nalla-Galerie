@@ -183,3 +183,89 @@ collections:
                     widget: text
                     required: false
                     hint: Texte affiché quand on clique sur l'œuvre.
+
+  - name: pages
+    label: Pages
+    files:
+      - name: atelier
+        label: Atelier
+        file: atelier.json
+        format: json
+        fields: &editorial_page_fields
+          - label: Petit titre
+            name: eyebrow
+            widget: string
+            required: false
+          - label: Titre principal
+            name: title
+            widget: string
+          - label: Introduction
+            name: intro
+            widget: text
+            required: false
+          - label: Blocs de contenu
+            name: sections
+            widget: list
+            required: false
+            label_singular: Bloc
+            summary: '{{fields.title}}'
+            fields:
+              - label: Titre
+                name: title
+                widget: string
+              - label: Texte
+                name: text
+                widget: text
+                required: false
+              - label: Image
+                name: image
+                widget: image
+                required: false
+              - label: Description de l'image
+                name: image_alt
+                widget: string
+                required: false
+              - label: Légende
+                name: caption
+                widget: string
+                required: false
+          - label: Galerie photos
+            name: gallery
+            widget: list
+            required: false
+            label_singular: Photo
+            summary: '{{fields.caption}}'
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Description de l'image
+                name: alt
+                widget: string
+                required: false
+              - label: Légende
+                name: caption
+                widget: string
+                required: false
+          - label: Appel à l'action — titre
+            name: cta_title
+            widget: string
+            required: false
+          - label: Appel à l'action — texte
+            name: cta_text
+            widget: text
+            required: false
+          - label: Bouton — libellé
+            name: cta_label
+            widget: string
+            required: false
+          - label: Bouton — lien
+            name: cta_url
+            widget: string
+            required: false
+            hint: Par exemple « mailto:adresse@email.com », « https://wa.me/... » ou « artistes.html ».
+      - name: customisation
+        label: Customisation de vêtements
+        file: customisation.json
+        format: json
+        fields: *editorial_page_fields

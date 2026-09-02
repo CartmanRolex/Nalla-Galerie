@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Création · Ngor, Dakar",
+  "title": "L'atelier",
+  "intro": "Entrez dans l'espace où les idées prennent forme, entre peinture, gravure et recherche de matières.",
+  "sections": [
+    {
+      "title": "Un lieu vivant",
+      "text": "L'atelier est un espace de création, de transmission et de rencontre. Chaque œuvre y naît d'un dialogue entre le geste, la couleur et les héritages culturels.",
+      "image": "images/nalla-portrait.jpg",
+      "image_alt": "Nalla Thioye dans son atelier",
+      "caption": "Dans l'atelier à Ngor"
+    },
+    {
+      "title": "Visites et échanges",
+      "text": "Les visites se font sur rendez-vous. Venez découvrir les œuvres en cours, rencontrer l'artiste et échanger autour de sa démarche.",
+      "image": "images/06-oeil.jpg",
+      "image_alt": "Détail d'une œuvre colorée dans l'atelier",
+      "caption": "Œuvre en atelier"
+    }
+  ],
+  "gallery": [],
+  "cta_title": "Visiter l'atelier",
+  "cta_text": "Contactez-nous pour convenir d'un rendez-vous.",
+  "cta_label": "Prendre rendez-vous",
+  "cta_url": "mailto:thioyenalla925@gmail.com"
+}
