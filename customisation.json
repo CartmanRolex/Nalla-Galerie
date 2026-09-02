@@ -1,26 +1,21 @@
 {
-  "eyebrow": "Pièces uniques · Sur commande",
-  "title": "Customisation de vêtements",
-  "intro": "Des vêtements transformés à la main en pièces uniques, à porter comme des œuvres.",
+  "cta_url": "mailto:thioyenalla925@gmail.com",
+  "cta_label": "Demander une customisation",
+  "cta_title": "Créer votre pièce",
+  "eyebrow": "Peinture personnalisée",
+  "intro": "Donnez une nouvelle vie à vos vêtements grâce à notre service de peinture personnalisée. Chaque pièce peut être décorée avec des couleurs, des motifs, des dessins ou des textes selon vos envies.\nNotre objectif est de vous permettre de porter des vêtements qui vous ressemblent vraiment. Que vous souhaitiez une création discrète et élégante ou un design plus original et artistique, nous réalisons chaque personnalisation avec soin.\nVous pouvez choisir le vêtement, les couleurs et le style que vous souhaitez. Nous travaillons sur différentes pièces afin de créer un résultat unique et adapté à votre idée.\nChaque création est réalisée avec attention pour apporter une touche personnelle à votre tenue. La peinture permet de transformer un vêtement simple en une pièce originale que vous ne trouverez nulle part ailleurs.\nQue ce soit pour vous faire plaisir, offrir un cadeau personnalisé ou créer une tenue spéciale, notre service de peinture vous permet de laisser libre cours à votre imagination.\n",
   "sections": [
     {
-      "title": "Votre vêtement, une création unique",
-      "text": "Vestes, chemises, pantalons et accessoires deviennent des supports d'expression. Chaque customisation est imaginée selon la pièce, vos envies et l'univers de l'artiste.",
-      "image": "images/05-motifs.jpg",
-      "image_alt": "Motifs colorés servant d'inspiration aux vêtements personnalisés",
-      "caption": "Couleurs et motifs peints à la main"
-    },
-    {
-      "title": "Comment commander ?",
-      "text": "Envoyez une photo du vêtement et décrivez votre idée. Nous échangeons sur les couleurs, les motifs, le délai et le tarif avant de commencer la création.",
-      "image": "images/03-pirogues.jpg",
-      "image_alt": "Palette de motifs géométriques et colorés",
-      "caption": "Une personnalisation conçue avec vous"
+      "image": "images/18155bec-5f37-41b9-8506-b713542cf26c.jpeg",
+      "title": "All star ",
+      "text": "Acrylic "
     }
   ],
-  "gallery": [],
-  "cta_title": "Créer votre pièce",
-  "cta_text": "Présentez-nous votre vêtement et votre idée par e-mail.",
-  "cta_label": "Demander une customisation",
-  "cta_url": "mailto:thioyenalla925@gmail.com"
+  "gallery": [
+    {
+      "image": "images/img_0512_original.jpeg"
+    }
+  ],
+  "title": "Customisation de vêtements",
+  "cta_text": "Présentez-nous votre vêtement et votre idée par e-mail."
 }
