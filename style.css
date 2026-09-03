@@ -70,9 +70,14 @@ a{color:inherit}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(1.05)}
 .hero-img::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(26,12,12,.55) 0%,rgba(26,12,12,.25) 38%,rgba(26,12,12,.92) 88%,var(--ink) 100%);
+  background:linear-gradient(180deg,rgba(26,12,12,.5) 0%,rgba(26,12,12,.18) 38%,rgba(26,12,12,.78) 78%,var(--ink) 100%);
 }
-.hero-in{position:relative;padding-block:0 clamp(3rem,7vw,5.5rem)}
+.hero-in{position:relative;z-index:1;isolation:isolate;padding-block:0 clamp(3rem,7vw,5.5rem)}
+.hero-in::before{
+  content:"";position:absolute;z-index:-1;inset:-1.6rem -1.2rem -1.9rem;
+  background:radial-gradient(ellipse 95% 70% at 44% 58%,rgba(26,12,12,.72) 0%,rgba(26,12,12,.5) 57%,rgba(26,12,12,0) 100%);
+  filter:blur(10px);pointer-events:none;
+}
 .hero h1{
   font-family:var(--display);font-weight:300;
   font-size:clamp(3rem,9vw,6.5rem);line-height:.98;letter-spacing:-.015em;
