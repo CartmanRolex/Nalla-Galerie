@@ -341,7 +341,7 @@ collections:
             name: cta_url
             widget: string
             required: false
-            hint: Par exemple « mailto:adresse@email.com », « https://wa.me/... » ou « artistes.html ».
+            hint: Pour contacter Nalla, utiliser « https://wa.me/221776817715 ». Un lien vers une page du site, par exemple « artistes.html », est aussi accepté.
       - name: customisation
         label: Customisation de vêtements
         file: customisation.json
