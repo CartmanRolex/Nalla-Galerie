@@ -1,0 +1,16 @@
+{
+  "eyebrow": "Expositions · Ngor, Dakar",
+  "title": "Exposition",
+  "intro": "Découvrez les expositions présentées à la Galerie Weurseuk et les événements à venir.",
+  "sections": [
+    {
+      "title": "Exposition en cours",
+      "text": "Les informations sur la prochaine exposition seront bientôt publiées ici."
+    }
+  ],
+  "gallery": [],
+  "cta_title": "Visiter l'exposition",
+  "cta_text": "Contactez-nous pour connaître les horaires ou organiser une visite.",
+  "cta_label": "Nous écrire sur WhatsApp",
+  "cta_url": "https://wa.me/221776817715"
+}

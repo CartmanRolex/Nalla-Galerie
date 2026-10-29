@@ -347,3 +347,8 @@ collections:
         file: customisation.json
         format: json
         fields: *editorial_page_fields
+      - name: exposition
+        label: Exposition
+        file: exposition.json
+        format: json
+        fields: *editorial_page_fields

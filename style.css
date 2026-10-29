@@ -49,10 +49,10 @@ a{color:inherit}
 .nav-links a:hover{color:var(--gold);border-color:var(--gold)}
 .nav-links a[aria-current="page"]{color:var(--gold);border-color:var(--gold-deep)}
 
-/* Sous 1050px, la marque et les liens ne tiennent plus sur une ligne :
+/* Sous 1200px, la marque et les liens ne tiennent plus sur une ligne :
    on empile en deux rangées plutôt que de laisser déborder — un débordement
    horizontal fait dézoomer la page entière sur mobile. */
-@media(max-width:1050px){
+@media(max-width:1200px){
   .nav-in{flex-direction:column;height:auto;padding-block:.8rem;gap:.55rem}
   .brand{font-size:1.2rem;letter-spacing:.11em}
   .nav-links{flex-wrap:wrap;justify-content:center;gap:.45rem 1.2rem}

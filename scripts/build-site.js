@@ -25,6 +25,7 @@ const worksData = readJson('works.json');
 const artistsData = readJson('artists.json');
 const atelier = readJson('atelier.json');
 const customisation = readJson('customisation.json');
+const exposition = readJson('exposition.json');
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -195,5 +196,8 @@ write('atelier.html', atelierPage);
 let customisationPage = source('customisation.html');
 customisationPage = replaceMount(customisationPage, 'editorial-page', renderEditorial(customisation));
 write('customisation.html', customisationPage);
+let expositionPage = source('exposition.html');
+expositionPage = replaceMount(expositionPage, 'editorial-page', renderEditorial(exposition));
+write('exposition.html', expositionPage);
 
 console.log('Site statique généré dans dist/.');
