@@ -1,7 +1,6 @@
 {
   "cta_url": "https://wa.me/221776817715",
   "cta_label": "Demander une customisation",
-  "cta_title": "Créer votre pièce",
   "eyebrow": "Peinture personnalisée",
   "intro": "Donnez une nouvelle vie à vos vêtements grâce à notre service de peinture personnalisée. Chaque pièce peut être décorée avec des couleurs, des motifs, des dessins ou des textes selon vos envies.\nNotre objectif est de vous permettre de porter des vêtements qui vous ressemblent vraiment. Que vous souhaitiez une création discrète et élégante ou un design plus original et artistique, nous réalisons chaque personnalisation avec soin.\nVous pouvez choisir le vêtement, les couleurs et le style que vous souhaitez. Nous travaillons sur différentes pièces afin de créer un résultat unique et adapté à votre idée.\nChaque création est réalisée avec attention pour apporter une touche personnelle à votre tenue. La peinture permet de transformer un vêtement simple en une pièce originale que vous ne trouverez nulle part ailleurs.\nQue ce soit pour vous faire plaisir, offrir un cadeau personnalisé ou créer une tenue spéciale, notre service de peinture vous permet de laisser libre cours à votre imagination.\n",
   "sections": [
@@ -26,6 +25,5 @@
       "image": "images/img_0164.jpeg"
     }
   ],
-  "title": "Customisation de vêtements",
-  "cta_text": "Présentez-nous votre vêtement et votre idée sur WhatsApp."
+  "title": "Customisation de vêtements"
 }

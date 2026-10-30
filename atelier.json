@@ -1,7 +1,4 @@
 {
-  "cta_url": "https://wa.me/221776817715",
-  "cta_label": "Prendre rendez-vous",
-  "cta_title": "Visiter l'atelier",
   "eyebrow": "Création · Ngor, Dakar",
   "intro": "Entrez dans l'espace où les idées prennent forme, entre peinture, gravure et recherche de matières.",
   "sections": [
@@ -21,6 +18,5 @@
     }
   ],
   "gallery": [],
-  "title": "L'atelier",
-  "cta_text": "Contactez-nous pour convenir d'un rendez-vous."
+  "title": "L'atelier"
 }

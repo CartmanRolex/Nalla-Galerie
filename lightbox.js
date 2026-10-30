@@ -19,6 +19,7 @@
         '<h2 class="lb-title"></h2>' +
         '<p class="lb-meta"></p>' +
         '<p class="lb-desc"></p>' +
+        '<a class="btn lb-ask" target="_blank" rel="noopener" hidden>Demander cette œuvre</a>' +
       '</div>' +
     '</div>';
   document.body.appendChild(box);
@@ -31,6 +32,15 @@
   var closeBtn = box.querySelector('.lb-close');
   var prevBtn = box.querySelector('.lb-prev');
   var nextBtn = box.querySelector('.lb-next');
+  var askLink = box.querySelector('.lb-ask');
+
+  // The gallery's WhatsApp number comes from the footer link, which every
+  // page carries both in the CMS preview and in the built site.
+  function whatsappNumber() {
+    var link = document.querySelector('.foot [data-site-whatsapp]');
+    var m = link && /wa\.me\/(\d+)/.exec(link.getAttribute('href') || '');
+    return m ? m[1] : '';
+  }
 
   function show(i) {
     index = (i + items.length) % items.length;
@@ -42,6 +52,13 @@
     artistEl.textContent = el.dataset.artist || '';
     metaEl.textContent = el.dataset.meta || '';
     descEl.textContent = el.dataset.desc || '';
+    var number = whatsappNumber();
+    askLink.hidden = !number;
+    if (number) {
+      var work = '« ' + (el.dataset.title || '') + ' »' + (el.dataset.artist ? ' de ' + el.dataset.artist : '');
+      askLink.href = 'https://wa.me/' + number + '?text=' +
+        encodeURIComponent('Bonjour, je suis intéressé(e) par l\'œuvre ' + work + '. Est-elle disponible ?');
+    }
   }
 
   function open(i) {
@@ -85,7 +102,7 @@
     else if (e.key === 'ArrowLeft') show(index - 1);
     else if (e.key === 'ArrowRight') show(index + 1);
     else if (e.key === 'Tab') {
-      var f = [closeBtn, prevBtn, nextBtn];
+      var f = [closeBtn, prevBtn, nextBtn].concat(askLink.hidden ? [] : [askLink]);
       var at = f.indexOf(document.activeElement);
       e.preventDefault();
       f[(at + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();

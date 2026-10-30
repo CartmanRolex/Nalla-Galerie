@@ -145,15 +145,6 @@ collections:
                       label: Exposition
                       name: item
                       widget: string
-              - label: Téléphone
-                name: phone
-                widget: string
-                required: false
-                hint: Sert aussi au lien WhatsApp.
-              - label: Email
-                name: email
-                widget: string
-                required: false
 
   - name: catalogue
     label: Catalogue
@@ -167,8 +158,6 @@ collections:
           - { label: Page Œuvres — petit titre, name: eyebrow, widget: string, required: false }
           - { label: Page Œuvres — titre, name: page_title, widget: string }
           - { label: Page Œuvres — introduction, name: page_intro, widget: text, required: false }
-          - { label: Contact — titre, name: contact_title, widget: string, required: false }
-          - { label: Contact — texte, name: contact_text, widget: text, required: false }
           - label: Séries
             name: series
             widget: list
@@ -325,15 +314,7 @@ collections:
                 name: caption
                 widget: string
                 required: false
-          - label: Appel à l'action — titre
-            name: cta_title
-            widget: string
-            required: false
-          - label: Appel à l'action — texte
-            name: cta_text
-            widget: text
-            required: false
-          - label: Bouton — libellé
+          - label: Bouton sous l'introduction — libellé
             name: cta_label
             widget: string
             required: false
@@ -341,7 +322,7 @@ collections:
             name: cta_url
             widget: string
             required: false
-            hint: Pour contacter Nalla, utiliser « https://wa.me/221776817715 ». Un lien vers une page du site, par exemple « artistes.html », est aussi accepté.
+            hint: Facultatif, seulement pour une vraie action (ex. commander une customisation). Les coordonnées sont déjà en bas de chaque page. Pour WhatsApp, utiliser « https://wa.me/221776817715 ». Un lien vers une page du site, par exemple « artistes.html », est aussi accepté.
       - name: customisation
         label: Customisation de vêtements
         file: customisation.json

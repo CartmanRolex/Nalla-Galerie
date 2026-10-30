@@ -15,7 +15,6 @@
       .replace(/&lt;(\/?)(em|strong)&gt;/g, '<$1$2>');
   }
 
-  function tel(p) { return String(p || '').replace(/[^0-9+]/g, ''); }
 
   // L'identifiant de page est déduit du nom : « Nalla Thioye » → « nalla-thioye ».
   function slugify(s) {
@@ -75,26 +74,7 @@
         }).join('') +
       '</div></section>';
 
-    var lines = '';
-    if (a.phone) {
-      lines += '<a class="line" href="tel:' + esc(tel(a.phone)) + '">' +
-        '<span class="line-label">Téléphone</span>' + esc(a.phone) + '</a>';
-      lines += '<a class="line" href="https://wa.me/' + esc(tel(a.phone).replace('+', '')) + '">' +
-        '<span class="line-label">WhatsApp</span>Écrire à ' + esc(a.name.split(' ')[0]) + '</a>';
-    }
-    if (a.email) {
-      lines += '<a class="line" href="mailto:' + esc(a.email) + '">' +
-        '<span class="line-label">Email</span>' + esc(a.email) + '</a>';
-    }
-    var contact = !lines ? '' :
-      '<section class="section contact"><div class="wrap">' +
-        '<h2>Contact</h2>' +
-        '<p>' + (a.location ? esc(a.location) + '. ' : '') +
-          'Pour une visite, une acquisition ou un projet d\'exposition.</p>' +
-        '<div class="lines">' + lines + '</div>' +
-      '</div></section>';
-
-    detail.innerHTML = head + bio + expos + contact;
+    detail.innerHTML = head + bio + expos;
     document.dispatchEvent(new CustomEvent('works:rendered'));
   }
 

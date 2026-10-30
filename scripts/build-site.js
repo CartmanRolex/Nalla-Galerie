@@ -51,7 +51,9 @@ function decorateShell(html) {
   return html
     .replace(/<a class="brand" href="index\.html">[\s\S]*?<\/a>/g, '<a class="brand" href="index.html">' + brand + '</a>')
     .replace(/<span data-site-location>[\s\S]*?<\/span>/g, '<span data-site-location>' + esc(place) + '</span>')
-    .replace(/<a data-site-phone href="[^"]*">[\s\S]*?<\/a>/g, '<a data-site-phone href="tel:' + esc(tel(site.phone)) + '">' + esc(site.phone) + '</a>');
+    .replace(/<a data-site-phone href="[^"]*">[\s\S]*?<\/a>/g, '<a data-site-phone href="tel:' + esc(tel(site.phone)) + '">' + esc(site.phone) + '</a>')
+    .replace(/<a data-site-whatsapp href="[^"]*">/g, '<a data-site-whatsapp href="https://wa.me/' + esc(String(site.whatsapp || '').replace(/\D/g, '')) + '">')
+    .replace(/<a class="foot-mail" data-site-email href="[^"]*">[\s\S]*?<\/a>/g, '<a class="foot-mail" data-site-email href="mailto:' + esc(site.email) + '">' + esc(site.email) + '</a>');
 }
 function write(name, html) {
   fs.writeFileSync(path.join(out, name), removeDataScripts(decorateShell(html)));
@@ -123,12 +125,10 @@ function renderEditorial(page) {
   const galleryItems = (page.gallery || []).filter((item) => item.image).map((item) => '<figure class="work rv"><div class="work-img"><img loading="lazy" src="' +
     esc(item.image) + '" alt="' + esc(item.alt || item.caption || '') + '"/></div>' + (item.caption ? '<figcaption>' + esc(item.caption) + '</figcaption>' : '') + '</figure>').join('');
   const galleryHtml = galleryItems ? '<div class="editorial-gallery"><div class="grid">' + galleryItems + '</div></div>' : '';
-  const cta = page.cta_title || page.cta_text || page.cta_label ? '<div class="editorial-cta rv">' +
-    (page.cta_title ? '<h2>' + esc(page.cta_title) + '</h2>' : '') + (page.cta_text ? '<p>' + esc(page.cta_text) + '</p>' : '') +
-    (page.cta_label ? '<div class="cta-row"><a class="btn" href="' + safeUrl(page.cta_url) + '">' + esc(page.cta_label) + '</a></div>' : '') + '</div>' : '';
   return '<section class="page-head"><div class="wrap">' + (page.eyebrow ? '<p class="eyebrow">' + esc(page.eyebrow) + '</p>' : '') +
     '<h1>' + esc(page.title) + '</h1>' + (page.intro ? '<p class="lead">' + esc(page.intro) + '</p>' : '') +
-    '</div></section><section class="section"><div class="wrap"><div class="content-blocks">' + sections + '</div>' + galleryHtml + cta + '</div></section>';
+    (page.cta_label ? '<div class="cta-row"><a class="btn" href="' + safeUrl(page.cta_url) + '">' + esc(page.cta_label) + '</a></div>' : '') +
+    '</div></section><section class="section"><div class="wrap"><div class="content-blocks">' + sections + '</div>' + galleryHtml + '</div></section>';
 }
 function renderArtistsList() {
   return '<div class="grid rv">' + (artistsData.artists || []).map((artist) => '<a class="work" href="' + esc(slugify(artist.name)) +
@@ -140,17 +140,13 @@ function renderArtistDetail(artist) {
   if (!artist) return '<div class="wrap"><p class="prose">Cet artiste est introuvable.</p></div>';
   const exhibitions = (artist.exhibitions || []).filter((entry) => (entry.items || []).length).map((entry) => '<div class="expo-year rv"><h3>' + esc(entry.year) +
     '</h3><ul class="expo-list">' + entry.items.map((item) => '<li>' + esc(item) + '</li>').join('') + '</ul></div>').join('');
-  const contactLines = (artist.phone ? '<a class="line" href="tel:' + esc(tel(artist.phone)) + '"><span class="line-label">Téléphone</span>' + esc(artist.phone) +
-    '</a><a class="line" href="https://wa.me/' + esc(tel(artist.phone).replace('+', '')) + '"><span class="line-label">WhatsApp</span>Écrire à ' + esc(artist.name.split(' ')[0]) + '</a>' : '') +
-    (artist.email ? '<a class="line" href="mailto:' + esc(artist.email) + '"><span class="line-label">Email</span>' + esc(artist.email) + '</a>' : '');
   return '<section class="page-head"><div class="wrap"><p class="eyebrow">' + esc(artist.role) + '</p><h1>' + esc(artist.name) + '</h1>' +
     (artist.intro ? '<p class="lead">' + rich(artist.intro) + '</p>' : '') + (artist.highlight_tag || artist.highlight_text ? '<div class="badge rv">' +
     (artist.highlight_tag ? '<span class="badge-tag">' + esc(artist.highlight_tag) + '</span>' : '') + (artist.highlight_text ? '<p>' + rich(artist.highlight_text) + '</p>' : '') + '</div>' : '') +
     '</div></section><section class="section bio"><div class="wrap bio-grid">' + (artist.portrait ? '<figure class="portrait rv"><img src="' + esc(artist.portrait) +
     '" alt="' + esc(artist.portrait_alt || artist.name) + '"/>' + (artist.portrait_credit ? '<figcaption>' + esc(artist.portrait_credit) + '</figcaption>' : '') + '</figure>' : '') +
     '<div class="rv"><h2>' + esc(artist.statement_title || 'Note d\'intention') + '</h2>' + (artist.statement ? '<p>' + rich(artist.statement) + '</p>' : '') +
-    '<div class="cta-row"><a class="btn" href="oeuvres.html">Voir les œuvres</a></div></div></div></section>' + (exhibitions ? '<section class="section"><div class="wrap"><div class="section-head rv"><h2>Expositions &amp; participations</h2></div>' + exhibitions + '</div></section>' : '') +
-    (contactLines ? '<section class="section contact"><div class="wrap"><h2>Contact</h2><p>' + (artist.location ? esc(artist.location) + '. ' : '') + 'Pour une visite, une acquisition ou un projet d’exposition.</p><div class="lines">' + contactLines + '</div></div></section>' : '');
+    '<div class="cta-row"><a class="btn" href="oeuvres.html">Voir les œuvres</a></div></div></div></section>' + (exhibitions ? '<section class="section"><div class="wrap"><div class="section-head rv"><h2>Expositions &amp; participations</h2></div>' + exhibitions + '</div></section>' : '');
 }
 
 let index = source('index.html');
@@ -170,8 +166,6 @@ let works = source('oeuvres.html');
 works = replaceInner(works, 'works-eyebrow', esc(worksData.eyebrow));
 works = replaceInner(works, 'works-title', esc(worksData.page_title));
 works = replaceInner(works, 'works-intro', esc(worksData.page_intro));
-works = replaceInner(works, 'works-contact-title', esc(worksData.contact_title));
-works = replaceInner(works, 'works-contact-text', esc(worksData.contact_text));
 works = replaceMount(works, 'works', renderWorks());
 write('oeuvres.html', works);
 

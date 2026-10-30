@@ -36,19 +36,14 @@
           (item.caption ? '<figcaption>' + esc(item.caption) + '</figcaption>' : '') + '</figure>';
       }).join('') + '</div></div>';
 
-    var cta = !(data.cta_title || data.cta_text || data.cta_label) ? '' :
-      '<div class="editorial-cta rv">' +
-      (data.cta_title ? '<h2>' + esc(data.cta_title) + '</h2>' : '') +
-      (data.cta_text ? '<p>' + esc(data.cta_text) + '</p>' : '') +
-      (data.cta_label ? '<div class="cta-row"><a class="btn" href="' + safeUrl(data.cta_url) + '">' +
-        esc(data.cta_label) + '</a></div>' : '') + '</div>';
-
     mount.innerHTML = '<section class="page-head"><div class="wrap">' +
       (data.eyebrow ? '<p class="eyebrow">' + esc(data.eyebrow) + '</p>' : '') +
       '<h1>' + esc(data.title) + '</h1>' +
       (data.intro ? '<p class="lead">' + esc(data.intro) + '</p>' : '') +
+      (data.cta_label ? '<div class="cta-row"><a class="btn" href="' + safeUrl(data.cta_url) + '">' +
+        esc(data.cta_label) + '</a></div>' : '') +
       '</div></section><section class="section"><div class="wrap">' +
-      '<div class="content-blocks">' + sections + '</div>' + galleryHtml + cta + '</div></section>';
+      '<div class="content-blocks">' + sections + '</div>' + galleryHtml + '</div></section>';
     document.dispatchEvent(new CustomEvent('works:rendered'));
   }
 

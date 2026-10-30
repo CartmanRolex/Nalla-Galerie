@@ -32,9 +32,7 @@
     var pageFields = {
       'works-eyebrow': data.eyebrow,
       'works-title': data.page_title,
-      'works-intro': data.page_intro,
-      'works-contact-title': data.contact_title,
-      'works-contact-text': data.contact_text
+      'works-intro': data.page_intro
     };
     Object.keys(pageFields).forEach(function (id) {
       var el = document.getElementById(id);
